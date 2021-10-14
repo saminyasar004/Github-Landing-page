@@ -1,0 +1,70 @@
+@import "./variables";
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: {
+        size: $html_font_size;
+    }
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font: {
+        size: $body_font_size;
+        family: $body_font_family;
+    }
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font: {
+        family: $header_1_font_family;
+    }
+}
+
+h1 {
+    font: {
+        size: $header_1_font_size;
+        weight: 600;
+    }
+}
+
+h2 {
+    font: {
+        size: $header_2_font_size;
+    }
+}
+
+h3 {
+    font: {
+        size: $header_3_font_size;
+        family: $header_3_font_family;
+    }
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: $text_dark;
+    text-decoration: none;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+    border: none;
+}

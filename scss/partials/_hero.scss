@@ -1,0 +1,202 @@
+@import "./variables";
+
+#heroSection {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(
+            90deg,
+            rgba(36, 41, 46, 0.95) 0%,
+            rgba(43, 49, 55, 0.95) 100%
+        ),
+        url("../assets/images/simple-codelines.svg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 3rem;
+
+    header {
+        text-align: center;
+
+        .row {
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 5% 60% 20% 15%;
+            grid-template-rows: auto;
+            align-items: center;
+
+            .logo {
+                a {
+                    cursor: pointer;
+                    img {
+                        max-width: 60%;
+                    }
+                }
+            }
+
+            .nav-links-container {
+                ul {
+                    width: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    list-style: none;
+
+                    li {
+                        a {
+                            color: $text_white;
+                            text-transform: capitalize;
+                            font: {
+                                size: 1.2rem;
+                                weight: 500;
+                                family: $header_1_font_family;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .search-bar-container {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    border-radius: 0.3rem;
+                    background: #474b50;
+                    color: $text_white;
+                    padding: 0.5rem 1rem;
+                    font: {
+                        size: 1.2rem;
+                        family: $header_1_font_family;
+                    }
+
+                    &::placeholder {
+                        color: $bg_secondary_white;
+                        opacity: 0.7;
+                        text-transform: capitalize;
+                    }
+                }
+
+                img {
+                    max-width: 9%;
+                    position: absolute;
+                    top: 50%;
+                    right: 4%;
+                    transform: translate(-4%, -50%);
+                }
+            }
+
+            .account-container {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    list-style: none;
+
+                    li {
+                        a {
+                            color: $text_white;
+                            font: {
+                                size: 1.2rem;
+                                weight: 500;
+                                family: $header_1_font_family;
+                            }
+
+                            &.btn-account {
+                                border: 0.1rem solid $bg_primary_white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-container {
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            align-items: center;
+
+            .hero-text-container {
+                h1 {
+                    width: 80%;
+                    margin: auto;
+                    color: $text_white;
+                }
+
+                p {
+                    width: 80%;
+                    margin: 0.4rem auto;
+                    color: $text_light_grey;
+                    font: {
+                        size: 1.3rem;
+                        weight: 500;
+                        family: $header_1_font_family;
+                    }
+
+                    .hero-text-highlight {
+                        color: $text_white;
+                    }
+                }
+            }
+
+            .hero-form-container {
+                padding: 1rem 1.5rem;
+                margin: auto 3rem;
+                border-radius: 0.5rem;
+                background: $bg_primary_white;
+
+                form {
+                    .form-group {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        padding: 0.5rem 0;
+
+                        label {
+                            color: $text_dark;
+                            text-transform: capitalize;
+                            font: {
+                                size: 1.3rem;
+                                weight: 600;
+                            }
+                        }
+
+                        input {
+                            padding: 0.8rem 1rem;
+                            border: 0.1rem solid #959da563;
+                            border-radius: 0.5rem;
+
+                            &.btn-submit {
+                                width: 100%;
+                                display: inline-block;
+                                margin: 1rem auto;
+                                padding: 1.5rem 1.5rem;
+                                color: $text_white;
+                                background: $bg_green;
+                                font: {
+                                    size: 1.3rem;
+                                    weight: 500;
+                                    family: $header_1_font_family;
+                                }
+                            }
+                        }
+
+                        p {
+                            font: {
+                                size: 1.1rem;
+                                weight: 500;
+                                family: $header_1_font_family;
+                            }
+                            a {
+                                color: $text_light_blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
