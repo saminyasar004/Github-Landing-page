@@ -1,0 +1,36 @@
+@import "./variables";
+
+#organizationSection {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    text-align: center;
+
+    .row.organization-content {
+        padding: 2rem 0;
+        h5 {
+            color: $text_primary_grey;
+            font: {
+                size: 1.4rem;
+                weight: 400;
+            }
+        }
+    }
+
+    .row.organization-icons-container {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        grid-gap: 2rem;
+        padding: 2rem 0;
+
+        .organization-icon {
+            text-align: center;
+            img {
+                max-width: 40%;
+                filter: grayscale(1);
+            }
+        }
+    }
+}

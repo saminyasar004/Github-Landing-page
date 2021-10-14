@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-drag: none;
 }
 
 html {
@@ -16,11 +17,13 @@ html {
 }
 
 body {
+    cursor: default;
+    overflow-x: hidden;
+    background: $bg_off_white;
     font: {
         size: $body_font_size;
         family: $body_font_family;
     }
-    overflow-x: hidden;
 }
 
 h1,

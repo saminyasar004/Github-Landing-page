@@ -1,21 +1,108 @@
 @import "./variables";
 
 #enterpriseSection {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10rem;
+
     .row {
         .enterprise-banner-image {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            min-height: 16rem;
+            position: relative;
+
             img {
+                position: absolute;
+                max-width: 50%;
             }
         }
+    }
+
+    .row.enterprise-container {
+        padding: 3rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 16rem;
+        border-radius: 0.4rem;
+        background: $bg_primary_white;
 
         .enterprise-text-container {
+            width: 28%;
+            height: auto;
+
             h2 {
+                margin: 1rem 0;
+                color: $text_dark;
+                font: {
+                    size: 2.8rem;
+                }
             }
 
             p {
+                color: $text_primary_grey;
+                font: {
+                    size: 1.4rem;
+                    weight: 500;
+                    family: $header_1_font_family;
+                }
             }
         }
 
         .enterprise-cards-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 15rem;
+
+            .enterprise-card {
+                text-align: center;
+
+                .enterprise-icon {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .enterprise-card-content {
+                    margin: 0.5rem 0;
+
+                    h5 {
+                        color: $text_dark;
+                        font: {
+                            size: 1.3rem;
+                        }
+                    }
+
+                    p {
+                        font: {
+                            size: 1.2rem;
+                        }
+                    }
+                }
+
+                .enterprise-card-button {
+                    a {
+                        padding: 1rem 1.8rem;
+                        font: {
+                            size: 1.1rem;
+                            weight: 500;
+                            family: $header_1_font_family;
+                        }
+
+                        &.btn-enterprise-free-trial {
+                            color: $text_white;
+                            background: $bg_primary_blue;
+                        }
+
+                        &.btn-contact {
+                            border: 0.1rem solid $bg_primary_blue;
+                        }
+                    }
+                }
+            }
         }
     }
 }
