@@ -1,0 +1,84 @@
+@import "./variables";
+
+#companiesSection {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+
+    .row.companies-header {
+        text-align: center;
+
+        h5 {
+            color: $text_primary_grey;
+            font: {
+                size: 1.4rem;
+                weight: 400;
+            }
+        }
+    }
+
+    .row.companies-grid-container {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 3rem;
+
+        .companies-card {
+            background: $bg_primary_white;
+            border: 0.1rem solid #ededed;
+            border-radius: 0.4rem;
+            overflow: hidden;
+            padding: 1.5rem 1.5rem;
+
+            .companies-banner {
+                border-radius: 0.4rem;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .companies-title {
+                padding: 0.8rem 0;
+
+                h4 {
+                    color: $text_dark;
+                    line-height: 1.7;
+                    font: {
+                        size: 1.2rem;
+                        weight: 600;
+                    }
+                }
+
+                p {
+                    color: $text_primary_grey;
+                    font: {
+                        weight: 500;
+                        family: $header_1_font_family;
+                    }
+                }
+            }
+
+            .companies-button {
+                padding-top: 2rem;
+                border-top: 0.1rem solid #ededed;
+
+                a.btn-companies {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0;
+                    color: $text_light_blue;
+                    font: {
+                        size: 1.1rem;
+                        weight: 600;
+                        family: $header_1_font_family;
+                    }
+                }
+            }
+        }
+    }
+}
